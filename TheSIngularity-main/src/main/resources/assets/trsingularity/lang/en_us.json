@@ -1,0 +1,12 @@
+{
+  "trsingularity.skill.skill_name": "Unique Skill",
+  "trsingularity.skill.skill_name.description": "This is a description for the unique skill. Edit this description using the en_us.json file.",
+  "trsingularity.skill.mode.skill_name.mod_name1": "Boom",
+  "trsingularity.skill.mode.skill_name.mod_name2": "Bigger Boom",
+
+  "trsingularity.race.robot": "Robot",
+  "trsingularity.race.robot.notes": "This is a fully custom race that you can change and control to your liking!",
+
+  "trsingularity.race.robot_evolved": "Robot Evolved",
+  "trsingularity.race.robot_evolved.notes": "This is a fully custom race that you can change and control to your liking!"
+}
