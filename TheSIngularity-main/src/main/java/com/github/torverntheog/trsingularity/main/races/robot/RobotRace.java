@@ -27,18 +27,38 @@ public class RobotRace extends Race {
 
 
     // Below is where u define the stats the player will acquire, I'll just place the default and u modify it.
-    public double getBaseHealth() {return 100F;}
+    public double getBaseHealth() {
+        return 100F;
+    }
+
     public double getSpiritualHealthMultiplier() {
         return 1.0F;
     }
-    public float getPlayerSize() {return 2.0F;}
-    public double getBaseAttackDamage() {return 1.0F;}
-    public double getBaseAttackSpeed() {return 1.0;}
-    public double getKnockbackResistance() {return 0.0F;}
+
+    public float getPlayerSize() {
+        return 2.0F;
+    }
+
+    public double getBaseAttackDamage() {
+        return 1.0F;
+    }
+
+    public double getBaseAttackSpeed() {
+        return 1.0;
+    }
+
+    public double getKnockbackResistance() {
+        return 0.0F;
+    }
+
     public double getJumpHeight() {
         return JumpPowerHelper.defaultPlayer(0.0F);
     }
-    public double getMovementSpeed() {return 0.1F;}
+
+    public double getMovementSpeed() {
+        return 0.1F;
+    }
+
     public double getSprintSpeed() {
         return 1.3F;
     }
@@ -50,9 +70,12 @@ public class RobotRace extends Race {
     // This is where u define Aura/MP range, I don't recommend setting the same as needed to evolve.
     // I also recommend adding a lil more by max to get that tasty off set number by EP.
     public @NotNull Pair<Double, Double> getBaseAuraRange() {
-        return Pair.of((double)1000.0F, (double)1100.0F);
+        return Pair.of((double) 1000.0F, (double) 1100.0F);
     }
-    public @NotNull Pair<Double, Double> getBaseMagiculeRange() {return Pair.of((double)1000.0F, (double)1100.0F);}
+
+    public @NotNull Pair<Double, Double> getBaseMagiculeRange() {
+        return Pair.of((double) 1000.0F, (double) 1100.0F);
+    }
 
     // Here you add the list of skills they get by acquiring the race.
     public List<TensuraSkill> getIntrinsicSkills(Player player) {
@@ -63,23 +86,23 @@ public class RobotRace extends Race {
     // This is where u add the next evolution by the evolution menu.
     public @NotNull List<Race> getNextEvolutions(@NotNull Player player) {
         List<Race> list = new ArrayList<>();
-        list.add((Race)((IForgeRegistry<?>) TensuraRaces.RACE_REGISTRY.get()).getValue(TRSingularityRaces.ROBOT_EVOLVED));
+        list.add((Race) ((IForgeRegistry<?>) TensuraRaces.RACE_REGISTRY.get()).getValue(TRSingularityRaces.ROBOT_EVOLVED));
         return list;
     }
 
     // This is where u add the next evolution by for example forceevo command.
     public @NotNull Race getDefaultEvolution(@NotNull Player player) {
-        return ((Race)((IForgeRegistry<?>)TensuraRaces.RACE_REGISTRY.get()).getValue(TRSingularityRaces.ROBOT_EVOLVED));
+        return ((Race) ((IForgeRegistry<?>) TensuraRaces.RACE_REGISTRY.get()).getValue(TRSingularityRaces.ROBOT_EVOLVED));
     }
 
     // This is where u add the next evolution by awakening.
     public Race getAwakeningEvolution(@NotNull Player player) {
-        return ((Race)((IForgeRegistry<?>)TensuraRaces.RACE_REGISTRY.get()).getValue(TRSingularityRaces.ROBOT_EVOLVED));
+        return ((Race) ((IForgeRegistry<?>) TensuraRaces.RACE_REGISTRY.get()).getValue(TRSingularityRaces.ROBOT_EVOLVED));
     }
 
     // This is where u add the next evolution by when your owner awakens.
     public Race getHarvestFestivalEvolution(@NotNull Player player) {
-        return ((Race)((IForgeRegistry<?>)TensuraRaces.RACE_REGISTRY.get()).getValue(TRSingularityRaces.ROBOT_EVOLVED));
+        return ((Race) ((IForgeRegistry<?>) TensuraRaces.RACE_REGISTRY.get()).getValue(TRSingularityRaces.ROBOT_EVOLVED));
     }
 
     // You can just place return null; by the evolutions if u want none.
@@ -87,10 +110,9 @@ public class RobotRace extends Race {
 
 
     // This is where u get the previous evolution, since the race is from Tensura,
-    // you'll need a Mixin to add your race as a getNextEvolutions by Human Race. Go to HumanMixin.
     public @NotNull List<Race> getPreviousEvolutions(@NotNull Player player) {
         List<Race> list = new ArrayList<>();
-        list.add((Race)((IForgeRegistry<?>)TensuraRaces.RACE_REGISTRY.get()).getValue(TensuraRaces.HUMAN.getId()));
+        list.add((Race) ((IForgeRegistry<?>) TensuraRaces.RACE_REGISTRY.get()).getValue(TensuraRaces.HUMAN.getId()));
         return list;
     }
 
@@ -141,3 +163,4 @@ public class RobotRace extends Race {
         return list;
     }
 }
+
